@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #000000;
+}
+
+/* Mensaje sobre imagen */
+.msg {
+  position: fixed;
+  width: 100%;
+  top: 75%;
+  z-index: 10;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-family: "Londrina Solid", cursive;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: 33px;
+  text-align: center;
+  text-shadow: 10px 10px 25px rgb(223, 29, 248),
+    -10px 10px 25px rgb(223, 29, 248), -10px -10px 25px rgb(223, 29, 248),
+    10px -10px 25px rgb(223, 29, 248);
+}
+
+/* Contenedor de imagenes */
+.slideshowContainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Imágenes */
+.imageSlides {
+  object-fit: cover;
+  position: absolute;
+  max-height: 100vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -1;
+}
+
+/* Clase 'visible' para javascript */
+.visible {
+  opacity: 1;
+}
+
+/* Flechas */
+.slideshowArrow {
+  font-size: 7em;
+  color: rgba(161, 0, 182, 0.3);
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+  transition: 0s 1s;
+}
+
+/* Flechas al presionar */
+.slideshowArrow:active {
+  color: rgb(255, 8, 232);
+  transition: 1s;
+}
+
+/* Flecha izquierda */
+#leftArrow {
+  position: absolute;
+  left: 4%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Flecha derecha */
+#rightArrow {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
